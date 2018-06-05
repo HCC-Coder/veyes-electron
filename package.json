@@ -6,8 +6,10 @@
   "scripts": {
     "start": "webpack-dev-server --mode development --open --port 3001",
     "build": "webpack",
+    "electron-dev": "ELECTRON_ENV=dev electron .",
     "electron": "electron ."
   },
+  "homepage": "./",
   "author": "",
   "license": "ISC",
   "dependencies": {

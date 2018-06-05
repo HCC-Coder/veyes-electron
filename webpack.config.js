@@ -1,29 +1,12 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const CrewHtmlWebpackPluginConfig = new HtmlWebpackPlugin({
-  template: './src/crew.html',
-  filename: 'crew.html',
-  chunks: ['crew'],
+const VeyesHtmlWebpackPluginConfig = new HtmlWebpackPlugin({
+  template: './src/index.html',
+  filename: 'index.html',
+  chunks: ['index'],
   inject: 'body'
 })
-const JudgeHtmlWebpackPluginConfig = new HtmlWebpackPlugin({
-  template: './src/judge.html',
-  filename: 'judge.html',
-  chunks: ['judge'],
-  inject: 'body'
-})
-const ScreenHtmlWebpackPluginConfig = new HtmlWebpackPlugin({
-  template: './src/screen.html',
-  filename: 'screen.html',
-  chunks: ['screen'],
-  inject: 'body'
-})
-const MonitorHtmlWebpackPluginConfig = new HtmlWebpackPlugin({
-  template: './src/monitor.html',
-  filename: 'monitor.html',
-  chunks: ['monitor'],
-  inject: 'body'
-})
+
 
 module.exports = {
   devServer : {
@@ -31,10 +14,7 @@ module.exports = {
   },  
   mode: 'development',
   entry: {
-    screen: './src/screen.js',
-    crew: './src/crew.js',
-    judge: './src/judge.js',
-    monitor: './src/monitor.js'
+    index: './src/index.js',
   },
   output: {
     // filename: 'crew.js',
@@ -48,5 +28,5 @@ module.exports = {
       { test: /\.(png|svg|jpg|gif|mp4|otf)$/, use: ['file-loader'] }
     ]
   },
-  plugins: [CrewHtmlWebpackPluginConfig, JudgeHtmlWebpackPluginConfig, ScreenHtmlWebpackPluginConfig, MonitorHtmlWebpackPluginConfig]
+  plugins: [VeyesHtmlWebpackPluginConfig]
 };

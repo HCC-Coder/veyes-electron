@@ -1,5 +1,5 @@
 {
-  "name": "hsbc-score",
+  "name": "veyes2",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -26,6 +26,7 @@
     "babel-loader": "^7.1.4",
     "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1",
+    "electron": "^2.0.2",
     "file-loader": "^1.1.11",
     "webpack": "^4.9.1",
     "webpack-cli": "^2.1.4",
